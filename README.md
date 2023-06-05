@@ -5,7 +5,7 @@
 
 
 case比較：
-斯特拉森算法把原先普通二階矩陣相乘需要的8次乘法壓縮到7次乘法，而在計算機，乘法運算的耗時遠遠高於加減運算，所以斯特拉森算法可以將O(d^ 3) 壓縮到O(d^2.8)。需要知道的是，斯特拉森算法只是對矩陣分治的算法而不是單獨的乘法算法，分治完成時最後使用的還是普通矩陣乘法，在階數小於等於32（或者64？看過不同的實驗結果）時普通的矩陣乘法會有更快的速度，而隨著矩陣的階不斷增加，斯特拉森可以提供更快的速度。
+矩陣鏈乘法（或矩陣鏈排序問題[1]）是關於以最有效的方式乘以給定矩陣序列的優化問題。問題實際上不是執行乘法，而只是決定所涉及的矩陣乘法的順序。該問題可以使用動態規劃來解決。
 
 
 新增cuda混合編譯
@@ -14,3 +14,4 @@ case比較：
 https://blog.csdn.net/zzc_zhuyu/article/details/89929129
 https://github.com/hengdashi/cuda_gcn/tree/main
 https://blog.csdn.net/weixin_56273009/article/details/127449183?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-4-127449183-blog-89929129.235^v36^pc_relevant_default_base&spm=1001.2101.3001.4242.3&utm_relevant_index=5
+https://en.wikipedia.org/wiki/Matrix_chain_multiplication
